@@ -1,0 +1,27 @@
+Задача №2
+sudo adduser examuser
+sudo addgroup examgroup
+Adding group `examgroup' (GID 1004) ...
+Done.
+sudo addgroup strypes
+Adding group `strypes' (GID 1005) ...
+Done.
+sudo cat /etc/passwd
+sudo cat /etc/group
+sudo usermod -a -G examgroup examuser
+sudo usermod -a -G strypes examuser
+cp /etc/passwd .
+sudo chown examuser:strypes passwd
+ls -l passwd
+-rw-r--r-- 1 examuser strypes 2953 ное 12 15:38 passwd
+sudo chmod 752 passwd
+ls -l passwd
+-rwxr-x-w- 1 examuser strypes 2953 ное 12 15:38 passwd
+sudo chmod u=rwx,g=rx,o=w passwd
+ls -l passwd
+-rwxr-x-w- 1 examuser strypes 2953 ное 12 15:38 passwd
+
+
+
+
+

@@ -1,0 +1,136 @@
+Задача №1
+pwd
+mkdir  -p "Linux Exam"/Files "Linux Exam"/Strypes/Day{01..02} 
+cd "Linux Exam"/
+miglena_mag@miglena-Ubuntu:~/Linux Exam$ tree
+.
+├── Files
+└── Strypes
+    ├── Day01
+    └── Day02
+
+touch Files/doc{1..5}.txt Files/report{1..5}.doc Files/results{1..5}.doc ./Files/statistics{1..2}.xls
+tree
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   ├── report1.doc
+│   ├── report2.doc
+│   ├── report3.doc
+│   ├── report4.doc
+│   ├── report5.doc
+│   ├── results1.doc
+│   ├── results2.doc
+│   ├── results3.doc
+│   ├── results4.doc
+│   ├── results5.doc
+│   ├── statistics1.xls
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    └── Day02
+
+4 directories, 17 files
+
+cp -v Files/*.txt Strypes/Day01
+'Files/doc1.txt' -> 'Strypes/Day01/doc1.txt'
+'Files/doc2.txt' -> 'Strypes/Day01/doc2.txt'
+'Files/doc3.txt' -> 'Strypes/Day01/doc3.txt'
+'Files/doc4.txt' -> 'Strypes/Day01/doc4.txt'
+'Files/doc5.txt' -> 'Strypes/Day01/doc5.txt'
+
+cd Files
+mv -v *.doc ../Strypes/Day02
+renamed 'report1.doc' -> '../Strypes/Day02/report1.doc'
+renamed 'report2.doc' -> '../Strypes/Day02/report2.doc'
+renamed 'report3.doc' -> '../Strypes/Day02/report3.doc'
+renamed 'report4.doc' -> '../Strypes/Day02/report4.doc'
+renamed 'report5.doc' -> '../Strypes/Day02/report5.doc'
+renamed 'results1.doc' -> '../Strypes/Day02/results1.doc'
+renamed 'results2.doc' -> '../Strypes/Day02/results2.doc'
+renamed 'results3.doc' -> '../Strypes/Day02/results3.doc'
+renamed 'results4.doc' -> '../Strypes/Day02/results4.doc'
+renamed 'results5.doc' -> '../Strypes/Day02/results5.doc'
+
+mv statistics1.xls .statistics1.xls
+tree ..
+..
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    │   ├── doc1.txt
+    │   ├── doc2.txt
+    │   ├── doc3.txt
+    │   ├── doc4.txt
+    │   └── doc5.txt
+    └── Day02
+        ├── report1.doc
+        ├── report2.doc
+        ├── report3.doc
+        ├── report4.doc
+        ├── report5.doc
+        ├── results1.doc
+        ├── results2.doc
+        ├── results3.doc
+        ├── results4.doc
+        └── results5.doc
+
+4 directories, 21 files
+
+rm -vir ../Strypes/Day02
+rm: descend into directory '../Strypes/Day02'? y
+rm: remove regular empty file '../Strypes/Day02/report3.doc'? y
+removed '../Strypes/Day02/report3.doc'
+rm: remove regular empty file '../Strypes/Day02/report4.doc'? y
+removed '../Strypes/Day02/report4.doc'
+rm: remove regular empty file '../Strypes/Day02/results5.doc'? y
+removed '../Strypes/Day02/results5.doc'
+rm: remove regular empty file '../Strypes/Day02/results3.doc'? y
+removed '../Strypes/Day02/results3.doc'
+rm: remove regular empty file '../Strypes/Day02/report2.doc'? y
+removed '../Strypes/Day02/report2.doc'
+rm: remove regular empty file '../Strypes/Day02/results1.doc'? y
+removed '../Strypes/Day02/results1.doc'
+rm: remove regular empty file '../Strypes/Day02/report5.doc'? y
+removed '../Strypes/Day02/report5.doc'
+rm: remove regular empty file '../Strypes/Day02/report1.doc'? y
+removed '../Strypes/Day02/report1.doc'
+rm: remove regular empty file '../Strypes/Day02/results4.doc'? y
+removed '../Strypes/Day02/results4.doc'
+rm: remove regular empty file '../Strypes/Day02/results2.doc'? y
+removed '../Strypes/Day02/results2.doc'
+rm: remove directory '../Strypes/Day02'? y
+removed directory '../Strypes/Day02'
+tree ..
+..
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   └── statistics2.xls
+└── Strypes
+    └── Day01
+        ├── doc1.txt
+        ├── doc2.txt
+        ├── doc3.txt
+        ├── doc4.txt
+        └── doc5.txt
+
+3 directories, 11 files
+
+
+
+
+

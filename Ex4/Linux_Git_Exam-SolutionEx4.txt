@@ -1,0 +1,9 @@
+ git clone https://github.com/miglenamag/Linux-Exam.git
+Cloning into 'Linux-Exam'...
+warning: You appear to have cloned an empty repository.
+
+cd 'Linux-Exam'
+mkdir Ex{1..4}
+Ex1  Ex2  Ex3  Ex4
+
+

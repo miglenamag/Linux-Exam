@@ -1,0 +1,26 @@
+Задача №3
+cat Fruits.info | sort -k 1 | cut -d "#" -f 1
+Apple
+Avocado
+Blackberry
+Kiwi
+Raspberry
+Watermelon
+
+cat Fruits.info | cut -d "#" -f 2| sort -n
+4
+10
+29
+123
+345
+456
+
+cat Fruits.info | cut -d "#" -f 1,3 --output-delimiter=" "| sort  -n -k 2| tail -1 | cut -d " " -f 1 > fruit
+cat fruit
+Blackberry
+
+cat Fruits.info | cut -d "#" -f 1,2,3 --output-delimiter=" "| sort  -n -k 3 | head -4
+
+Watermelon 10 0.60
+Apple 29 2.40
+Kiwi 4 4.50
