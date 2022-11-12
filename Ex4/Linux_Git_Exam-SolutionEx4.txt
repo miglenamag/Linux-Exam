@@ -6,4 +6,26 @@ cd 'Linux-Exam'
 mkdir Ex{1..4}
 Ex1  Ex2  Ex3  Ex4
 
+git add --all
+miglena_mag@miglena-Ubuntu:~/Linux-Exam$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   Ex1/Linux_Git_Exam-SolutionEx1.txt
+	new file:   Ex2/Linux_Git_Exam-SolutionEx2.txt
+	new file:   Ex3/Linux_Git_Exam-SolutionEx3.txt
+	new file:   Ex4/Linux_Git_Exam-SolutionEx4.txt
+
+git commit -m "Added solutions of tasks"
+[main (root-commit) 8d9bb93] Added solutions of tasks
+ 4 files changed, 198 insertions(+)
+ create mode 100644 Ex1/Linux_Git_Exam-SolutionEx1.txt
+ create mode 100644 Ex2/Linux_Git_Exam-SolutionEx2.txt
+ create mode 100644 Ex3/Linux_Git_Exam-SolutionEx3.txt
+ create mode 100644 Ex4/Linux_Git_Exam-SolutionEx4.txt
+ 
+ git push
 
